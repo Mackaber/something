@@ -1,7 +1,9 @@
 image:
   file: .gitpod.dockerfile
 ports:
-  - port: 19000-19002
+  - port: 19000
 tasks:
   - before: npm install
     command: npm start
+    env:
+      EXPO_PACKAGER_PROXY_URL: "https://443-mackaber-something-z7y54m91vuc.ws-us67.gitpod.io:443"

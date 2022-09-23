@@ -17,7 +17,7 @@
     "@babel/core": "^7.18.6"
   },
   "scripts": {
-    "start": "expo start --host tunnel",
+    "start": "expo start --https",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"
