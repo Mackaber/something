@@ -1,4 +1,5 @@
 import * as tf from "@tensorflow/tfjs";
+// import  { bundleResourceIO } from '@tensorflow/tfjs-react-native';
 import React from "react";
 
 export function useTensorFlowModel(modelKind) {
@@ -13,10 +14,21 @@ export function useTensorFlowModel(modelKind) {
 
   React.useEffect(() => {
     setModel(null);
-    modelKind.load().then((model) => {
+    console.log("Loading model...");
+
+    //const modelJSON = require("../assets/model.json");
+    //const modelWeights = require("../assets/weights.bin");
+
+    modelKind.load()
+    //tf.loadLayersModel(bundleResourceIO(modelJSON, modelWeights))
+    //tf.loadLayersModel('https://storage.googleapis.com/tfjs-models/tfjs/iris_v1/model.json')
+    .then((model) => {
       if (isMounted.current) {
         setModel(model);
       }
+      console.log("Model loaded!");
+    }).catch(e => {
+      console.log(e);
     });
   }, [modelKind]);
 

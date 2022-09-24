@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@expo/webpack-config": "^0.17.0",
     "@react-native-async-storage/async-storage": "~1.17.3",
     "@tensorflow-models/mobilenet": "^2.1.0",
     "@tensorflow/tfjs": "^3.10.0",
@@ -7,10 +8,11 @@
     "expo": "^46.0.0",
     "expo-camera": "~12.3.0",
     "expo-gl": "~11.4.0",
+    "metro-config": "^0.72.3",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "react-native": "0.69.5",
-    "react-native-fs": "^2.16.6",
+    "react-native": "0.69.4",
+    "react-native-fs": "^2.20.0",
     "react-native-web": "~0.18.7"
   },
   "devDependencies": {
@@ -24,5 +26,5 @@
   },
   "version": "1.0.0",
   "private": true,
-  "name": "something"
+  "name": "tm_expo"
 }
